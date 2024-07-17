@@ -90,7 +90,7 @@ public class App {
 
                     for (Enrollment enrollment : gifu.getEnrollments()) {
                         if (enrollment.getCourse().equals(courseToList)) {
-                            System.out.println(enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName() + ", arvosana: " + enrollment.getGrade());
+                            System.out.println(enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName() + ", arvosana:" + enrollment.getGrade());
                         }
                     }
                     break;
@@ -105,7 +105,7 @@ public class App {
                     System.out.println("Opiskelijan " + studentToList.getStudentNumber() + " " + studentToList.getName() + " arvosanat:");
                     for (Enrollment enrollment : gifu.getEnrollments()) {
                         if (enrollment.getStudent().equals(studentToList)) {
-                            System.out.println(enrollment.getCourse().getId() + " " + enrollment.getCourse().getName() + ", arvosana: " + enrollment.getGrade());
+                            System.out.println(enrollment.getCourse().getId() + " " + enrollment.getCourse().getName() + ", arvosana:" + enrollment.getGrade());
                         }
                     }
                     break;
@@ -114,7 +114,7 @@ public class App {
                         System.out.println(c.getId() + " " + c.getName());
                         for (Enrollment enrollment : gifu.getEnrollments()) {
                             if (enrollment.getCourse().equals(c)) {
-                                System.out.println(enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName() + ", arvosana: " + enrollment.getGrade());
+                                System.out.println(enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName() + ", arvosana:" + enrollment.getGrade());
                             }
                         }
                     }

@@ -55,7 +55,6 @@ public class App {
                     int courseIndex = Integer.parseInt(scanner.nextLine());
                     Course course = gifu.getCourse(courseIndex);
 
-                    System.out.println("Opiskelijat:");
                     for (int i = 0; i < gifu.getStudents().size(); i++) {
                         System.out.println(i + ") " + gifu.getStudents().get(i).getStudentNumber() + " " + gifu.getStudents().get(i).getName());
                     }

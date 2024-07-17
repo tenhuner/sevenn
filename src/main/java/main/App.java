@@ -36,18 +36,17 @@ public class App {
                     gifu.addStudent(new Student(studentName, studentNumber));
                     break;
                 case 3:
-                //System.out.println("Kurssit:");
                 for (int i = 0; i < gifu.getCourses().size(); i++) {
                     Course course = gifu.getCourses().get(i);
                     System.out.println(i + ") " + course.getId() + " " + course.getName());
                 }
                 break;
                 case 4:
-                    System.out.println("Opiskelijat:");
-                    for (Student student : gifu.getStudents()) {
-                        System.out.println(student.getStudentNumber() + " " + student.getName());
-                    }
-                    break;
+                for (int i = 0; i < gifu.getStudents().size(); i++) {
+                    Student student = gifu.getStudents().get(i);
+                    System.out.println(i + ") " + student.getStudentNumber() + " " + student.getName());
+                }
+                break;
                 case 5:
                     //System.out.println("Kurssit:");
                     for (int i = 0; i < gifu.getCourses().size(); i++) {

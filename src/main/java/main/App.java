@@ -8,11 +8,10 @@ public class App {
         Gifu gifu = new Gifu();
 
         System.out.println("Tervetuloa Gifu-järjestelmään");
-        System.out.print("Mille yliopistolle haluat ottaa järjestelmän käyttöön? ");
-        String university = scanner.nextLine();
+       // String university = scanner.nextLine();
 
         while (true) {
-            System.out.println("1) Luo uusi kurssi, 2) Luo uusi opiskelija, 3) Listaa kurssit, 4) Listaa opiskelijat, 5) Lisää opiskelija kurssille, 6) Anna kurssiarvosanat, 7) Listaa kurssilla olevat opiskelijat, 8) Listaa opiskelijan arvosanat, 9) Listaa kaikkien kurssien kaikkien opiskelijoiden arvosanat, 0) Lopeta ohjelma");
+            System.out.println("Mille yliopistolle haluat ottaa järjestelmän käyttöön? 1) Luo uusi kurssi, 2) Luo uusi opiskelija, 3) Listaa kurssit, 4) Listaa opiskelijat, 5) Lisää opiskelija kurssille, 6) Anna kurssiarvosanat, 7) Listaa kurssilla olevat opiskelijat, 8) Listaa opiskelijan arvosanat, 9) Listaa kaikkien kurssien kaikkien opiskelijoiden arvosanat, 0) Lopeta ohjelma");
             int command = Integer.parseInt(scanner.nextLine());
 
             switch (command) {

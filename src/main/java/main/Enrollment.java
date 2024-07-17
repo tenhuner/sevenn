@@ -4,13 +4,13 @@ public class Enrollment {
     private Course course;
     private int grade;
 
-    public Enrollment(Student student, Course course) {
+    public Enrollment(Student student, Course course) {  // Constructor to initialize enrollment with student and course
         this.student = student;
         this.course = course;
-        this.grade = -1;
+        this.grade = -1; // Default grade is -1
     }
 
-    public Student getStudent() {
+    public Student getStudent() { 
         return student;
     }
 

@@ -7,7 +7,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         Gifu gifu = new Gifu();
 
-        System.out.println("Tervetuloa Gifu-järjestelmään");
+        System.out.println("Tervetuloa Gifu-järjestelmään"); // Welcome message and prompt for university name
         System.out.println("Mille yliopistolle haluat ottaa järjestelmän käyttöön?");
        String university = scanner.nextLine();
 
@@ -16,7 +16,7 @@ public class App {
             int command = Integer.parseInt(scanner.nextLine());
 
             switch (command) {
-                case 1:
+                case 1:  // Create a new course
                     System.out.println("Anna kurssin nimi:");
                     String courseName = scanner.nextLine();
 
@@ -26,30 +26,30 @@ public class App {
                     System.out.println("Anna kurssin maksimi opiskelijamäärä:");
                     int maxStudents = Integer.parseInt(scanner.nextLine());
 
-                    gifu.addCourse(new Course(courseName, courseId, maxStudents));
+                    gifu.addCourse(new Course(courseName, courseId, maxStudents)); // Add the new course to Gifu
                     break;
-                case 2:
+                case 2: // Create a new student
                     System.out.println("Anna opiskelijan nimi:");
                     String studentName = scanner.nextLine();
                     System.out.println("Anna opiskelijan opiskelijanumero:");
                     String studentNumber = scanner.nextLine();
-                    gifu.addStudent(new Student(studentName, studentNumber));
+                    gifu.addStudent(new Student(studentName, studentNumber)); // Add the new student to Gifu
                     break;
-                case 3:
+                case 3: // List all courses
                 for (int i = 0; i < gifu.getCourses().size(); i++) {
                     Course course = gifu.getCourses().get(i);
-                    System.out.println(i + ") " + course.getId() + " " + course.getName());
+                    System.out.println(i + ") " + course.getId() + " " + course.getName()); // Print course details
                 }
                 break;
-                case 4:
+                case 4: // List all students
                 for (int i = 0; i < gifu.getStudents().size(); i++) {
                     Student student = gifu.getStudents().get(i);
-                    System.out.println(i + ") " + student.getStudentNumber() + " " + student.getName());
+                    System.out.println(i + ") " + student.getStudentNumber() + " " + student.getName()); // Print student details
                 }
                 break;
-                case 5:
+                case 5: // Add a student to a course
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
-                        System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
+                        System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName()); // Print courses
                     }
                     System.out.println("Mille kurssille haluat lisätä opiskelijan? Syötä kurssin numero:");
                     int courseIndex = Integer.parseInt(scanner.nextLine());
@@ -59,12 +59,12 @@ public class App {
                         System.out.println(i + ") " + gifu.getStudents().get(i).getStudentNumber() + " " + gifu.getStudents().get(i).getName());
                     }
                     System.out.println("Minkä opiskelijan haluat lisätä kurssille? Syötä opiskelijan numero:");
-                    int studentIndex = Integer.parseInt(scanner.nextLine());
+                    int studentIndex = Integer.parseInt(scanner.nextLine()); // Read student number
                     Student student = gifu.getStudent(studentIndex);
 
-                    gifu.addEnrollment(new Enrollment(student, course));
+                    gifu.addEnrollment(new Enrollment(student, course)); // Add enrollment to Gifu
                     break;
-                case 6:
+                case 6: // Grade students in a course
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
@@ -80,7 +80,7 @@ public class App {
                         }
                     }
                     break;
-                case 7:
+                case 7: // List students in a course
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
@@ -94,7 +94,7 @@ public class App {
                         }
                     }
                     break;
-                case 8:
+                case 8: // List grades for a student
                     for (int i = 0; i < gifu.getStudents().size(); i++) {
                         System.out.println(i + ") " + gifu.getStudents().get(i).getStudentNumber() + " " + gifu.getStudents().get(i).getName());
                     }
@@ -103,23 +103,23 @@ public class App {
                     Student studentToList = gifu.getStudent(studentToListIndex);
 
                     System.out.println("Opiskelijan " + studentToList.getStudentNumber() + " " + studentToList.getName() + " arvosanat:");
-                    for (Enrollment enrollment : gifu.getEnrollments()) {
+                    for (Enrollment enrollment : gifu.getEnrollments()) { // Print course details and grade for each enrollment of the student
                         if (enrollment.getStudent().equals(studentToList)) {
                             System.out.println(enrollment.getCourse().getId() + " " + enrollment.getCourse().getName() + ", arvosana: " + enrollment.getGrade());
                         }
                     }
                     break;
-                case 9:
+                case 9: // List all grades for all students in all courses
                     for (Course c : gifu.getCourses()) {
-                        System.out.println(c.getId() + " " + c.getName());
-                        for (Enrollment enrollment : gifu.getEnrollments()) {
+                        System.out.println(c.getId() + " " + c.getName()); // Print course details
+                        for (Enrollment enrollment : gifu.getEnrollments()) { // Print student details and grade for each enrollment in the course
                             if (enrollment.getCourse().equals(c)) {
                                 System.out.println(enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName() + ", arvosana: " + enrollment.getGrade());
                             }
                         }
                     }
                     break;
-                case 0:
+                case 0: // Exit the program
                     System.out.println("Kiitos ohjelman käytöstä.");
                     scanner.close();
                     return;

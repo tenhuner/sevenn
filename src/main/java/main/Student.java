@@ -1,6 +1,6 @@
 package main;
 
-public class Student {
+public class Student { //Constructor to initialize student attributes
     private String name;
     private String studentNumber;
 
@@ -9,11 +9,11 @@ public class Student {
         this.studentNumber = studentNumber;
     }
 
-    public String getName() {
+    public String getName() { // Getter for student name
         return name;
     }
 
-    public String getStudentNumber() {
+    public String getStudentNumber() { // Getter for student number
         return studentNumber;
     }
 }

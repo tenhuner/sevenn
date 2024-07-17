@@ -59,8 +59,7 @@ public class App {
                     for (int i = 0; i < gifu.getStudents().size(); i++) {
                         System.out.println(i + ") " + gifu.getStudents().get(i).getStudentNumber() + " " + gifu.getStudents().get(i).getName());
                     }
-                    System.out.println("Minkä opiskelijan haluat lisätä kurssille?");
-                    System.out.println("Syötä opiskelijan numero:");
+                    System.out.println("Minkä opiskelijan haluat lisätä kurssille?  Syötä opiskelijan numero:");
                     int studentIndex = Integer.parseInt(scanner.nextLine());
                     Student student = gifu.getStudent(studentIndex);
 

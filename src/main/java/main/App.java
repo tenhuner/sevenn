@@ -68,7 +68,8 @@ public class App {
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
-                    System.out.println("Minkä kurssin haluat arvostella? Syötä kurssin numero:");
+                    System.out.println("Minkä kurssin haluat arvostella?");
+                    System.out.println("Syötä kurssin numero:");
                     int courseToGradeIndex = Integer.parseInt(scanner.nextLine());
                     Course courseToGrade = gifu.getCourse(courseToGradeIndex);
 

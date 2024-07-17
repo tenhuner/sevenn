@@ -74,7 +74,7 @@ public class App {
 
                     for (Enrollment enrollment : gifu.getEnrollments()) {
                         if (enrollment.getCourse().equals(courseToGrade)) {
-                            System.out.print("Anna arvosana opiskelijalle " + enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName() + ": ");
+                            System.out.print("Anna arvosana opiskelijalle " + enrollment.getStudent().getStudentNumber() + " " + enrollment.getStudent().getName());
                             int grade = Integer.parseInt(scanner.nextLine());
                             enrollment.setGrade(grade);
                         }

@@ -42,7 +42,6 @@ public class App {
                     System.out.println(i + ") " + course.getId() + " " + course.getName());
                 }
                 break;
-                    break;
                 case 4:
                     System.out.println("Opiskelijat:");
                     for (Student student : gifu.getStudents()) {

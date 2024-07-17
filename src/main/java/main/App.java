@@ -87,7 +87,8 @@ public class App {
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
-                    System.out.println("Minkä kurssin opiskelijat haluat listata? Syötä kurssin numero:");
+                    System.out.println("Minkä kurssin opiskelijat haluat listata?");
+                    System.out.println("Syötä kurssin numero:");
                     int courseToListIndex = Integer.parseInt(scanner.nextLine());
                     Course courseToList = gifu.getCourse(courseToListIndex);
 

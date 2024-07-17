@@ -48,7 +48,6 @@ public class App {
                 }
                 break;
                 case 5:
-                    //System.out.println("Kurssit:");
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
@@ -67,7 +66,6 @@ public class App {
                     gifu.addEnrollment(new Enrollment(student, course));
                     break;
                 case 6:
-                    //System.out.println("Kurssit:");
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
@@ -84,7 +82,6 @@ public class App {
                     }
                     break;
                 case 7:
-                    //System.out.println("Kurssit:");
                     for (int i = 0; i < gifu.getCourses().size(); i++) {
                         System.out.println(i + ") " + gifu.getCourses().get(i).getId() + " " + gifu.getCourses().get(i).getName());
                     }
@@ -99,7 +96,6 @@ public class App {
                     }
                     break;
                 case 8:
-                    System.out.println("Opiskelijat:");
                     for (int i = 0; i < gifu.getStudents().size(); i++) {
                         System.out.println(i + ") " + gifu.getStudents().get(i).getStudentNumber() + " " + gifu.getStudents().get(i).getName());
                     }

@@ -17,12 +17,15 @@ public class App {
 
             switch (command) {
                 case 1:
-                    System.out.print("Anna kurssin nimi: ");
+                    System.out.print("Anna kurssin nimi:");
                     String courseName = scanner.nextLine();
-                    System.out.print("Anna kurssin ID: ");
+
+                    System.out.print("Anna kurssin ID:");
                     String courseId = scanner.nextLine();
-                    System.out.print("Anna kurssin maksimi opiskelijamäärä: ");
+
+                    System.out.print("Anna kurssin maksimi opiskelijamäärä:");
                     int maxStudents = Integer.parseInt(scanner.nextLine());
+                    
                     gifu.addCourse(new Course(courseName, courseId, maxStudents));
                     break;
                 case 2:
